@@ -38,6 +38,8 @@ import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
 
+   // TextView textView =findViewById(R.id.textview);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 //displaying the first match
                 if (matches != null)
                     editText.setText(matches.get(0));
+
                 String TEEmessage = matches.get(0);
                 postText(TEEmessage);
             }
@@ -220,3 +223,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+//199,39,104
