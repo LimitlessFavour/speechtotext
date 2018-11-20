@@ -37,7 +37,6 @@ import java.util.Locale;
 import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textView =findViewById(R.id.textview);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 //displaying the first match
                 if (matches != null)
                     editText.setText(matches.get(0));
-                String TEEmessage=matches.get(0);
+                String TEEmessage = matches.get(0);
+                postText(TEEmessage);
             }
 
             @Override
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
     private void postText(String TEEmessage){
         try{
             // url where the data will be posted
-            String postReceiverUrl=" ";
+            String postReceiverUrl="http://innhubhai.herokuapp.com/start/";
             List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
             //nameValuePairs.add(new BasicNameValuePair("HIA", "hello"));
 
